@@ -24,9 +24,7 @@ A simple, responsive school management interface designed to display student dat
 
 ---
 
-## 🚀 Getting Started
 
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/smart-school-dashboard.git
-cd smart-school-dashboard
+![Smart school management dashboard](https://github.com/user-attachments/assets/ec6de96d-7638-4de3-9d61-4a623d962391)
+
+
