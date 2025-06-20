@@ -1,0 +1,99 @@
+
+
+<!-- Dashboard dành cho hiệu trưởng: quản lý sinh viên, giáo viên -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hiệu trưởng | Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  <script src="script.js"></script>
+
+  <style>
+    body {
+      background-color: #f1f8f9;
+      padding: 20px;
+      font-family: "Segoe UI", sans-serif;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+    .header img {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+    }
+    .header h2 {
+      margin: 0;
+      color: #00695c;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 40px;
+    }
+    .btn-logout {
+      background-color: #e53935;
+      color: white;
+    }
+    .btn-logout:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-left">
+      <img src="assets/logo.png" alt="Logo trường">
+      <h2>Xin chào, Hiệu trưởng</h2>
+    </div>
+    <button class="btn btn-sm btn-logout" onclick="logout()">Đăng xuất</button>
+  </div>
+
+  <div class="container">
+    <div class="section-title">📚 Quản lý sinh viên</div>
+    <input type="file" id="studentCSV" accept=".csv" class="form-control mb-3">
+    <table id="studentTable" class="table table-bordered table-striped"></table>
+
+    <div class="section-title">👩‍🏫 Quản lý giáo viên</div>
+    <input type="file" id="teacherCSV" accept=".csv" class="form-control mb-3">
+    <table id="teacherTable" class="table table-bordered table-striped"></table>
+  </div>
+
+  <div class="footer">
+    Smart School Portal © 2025 – Dashboard Hiệu trưởng
+  </div>
+
+  <script>
+    // Load bảng từ file CSV
+    window.onload = function () {
+      parseCSV("studentCSV", "studentTable");
+      parseCSV("teacherCSV", "teacherTable");
+    };
+
+    // Hàm đăng xuất
+    function logout() {
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

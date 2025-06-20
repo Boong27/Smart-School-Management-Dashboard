@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>HCMUS Portal – Đăng nhập</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #111;
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Khối đầu: logo + tiêu đề */
+    .portal-header {
+      text-align: center;
+      padding: 30px 10px 15px;
+      border-bottom: 2px solid #999;
+    }
+
+    .portal-header img {
+      height: 300px;
+      margin-bottom: 5px;
+    }
+
+    .portal-header h4 {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      margin: 5px 0 10px;
+    }
+
+    /* Khối đăng nhập */
+    .login-box {
+      background-color: #f9f9f9;
+      padding: 25px 30px;
+      max-width: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .login-box h6 {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .login-box h6::before {
+      content: "⚠️";
+      margin-right: 8px;
+    }
+
+    .form-check {
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo + Tiêu đề -->
+  <div class="portal-header">
+    <img src="assets/logo.png" alt="Logo HCMUS">
+    <h4>HCMUS Portal – Đăng nhập</h4>
+  </div>
+
+  <!-- Hộp đăng nhập -->
+  <div class="login-box">
+    <h6>Hãy dùng tài khoản của bạn để đăng nhập</h6>
+
+    <form onsubmit="return login();">
+      <div class="mb-3">
+        <label for="username" class="form-label">Tên đăng nhập</label>
+        <input type="text" class="form-control" id="username" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Mật khẩu</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="remember">
+        <label class="form-check-label" for="remember">Lưu thông tin</label>
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <button type="submit" class="btn btn-dark btn-sm">Đăng nhập</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">© 2025 Smart School Portal</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
