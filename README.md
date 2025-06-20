@@ -1,7 +1,8 @@
 # Smart School Management Dashboard
 
 A simple, responsive school management interface designed to display student data, class assignments, and score statistics using modern frontend technologies.
-![Smart school management dashboard](https://github.com/user-attachments/assets/ec6de96d-7638-4de3-9d61-4a623d962391)
+
+![Smart school management dashboard](https://github.com/user-attachments/assets/4c42ab91-8429-446b-a994-804fb5e448b9)
 
 ---
 
@@ -22,6 +23,9 @@ A simple, responsive school management interface designed to display student dat
 - [Chart.js](https://www.chartjs.org/)
 - [json-server](https://github.com/typicode/json-server)
 - Designed with Figma / Canva
+
+
+![image](https://github.com/user-attachments/assets/c7a0b503-17a6-4f1a-869e-760227192be1)
 
 ---
 
